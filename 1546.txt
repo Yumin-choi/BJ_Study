@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int total = 0;
+	int maximum = 0;
+	int score;
+	
+	for(int i=1; i<=N; i++) {
+		score = scanner.nextInt();
+		total+=score;
+		
+		if(maximum<score) {
+			maximum=score;
+		}
+	}
+	
+	double average = 0;
+	average= 100.0*total/maximum/N;
+	 System.out.printf("%.2f", average);
+	
+	}
+}
