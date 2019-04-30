@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+	int N, max=0, total=0;
+	scanf("%d", &N);
+	for(int i=0; i<N; i++) {
+		int score;
+		scanf("%d", &score);
+		total+=score;
+		if(max<score)
+			max=score;
+	}
+	printf("%.2lf", (double)total*100/(N*max));
+}
