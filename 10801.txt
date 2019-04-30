@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a[]=new int[10];
+		int b[]=new int[10];
+		int cnt=0;
+		int cmt=0;
+		for(int i=0; i<a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		for(int i=0; i<b.length; i++) {
+			b[i]=sc.nextInt();
+		}
+		for(int i = 0;i<a.length; i++) {
+			if(a[i]>b[i])
+				cnt++;
+			if(b[i]>a[i])
+				cmt++;
+		}
+		if(cnt>cmt)
+			System.out.println("A");
+		if(cmt>cnt)
+			System.out.println("B");
+		if(cnt==cmt)
+			System.out.println("D");
+	}
+}
